@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: #4b073a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.setEventDate {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #4b073a, #174fa3);
+  height: 100px;
+  width: 500px;
+  margin-bottom: 50px;
+  color: #000000;
+  text-shadow: 1px 1px 7px;
+  border-radius: 1000px;
+  border: 10px solid rgb(38, 41, 82);
+  box-shadow: 0 0 30px 25px;
+}
+
+.setEventDate label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.setEventDate input {
+ background-color: #3512b4;
+ font-size: large;
+ height: 30px;
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #4b073a, #174fa3);
+  height: 300px;
+  width: 500px;
+  color: #000000;
+  text-shadow: 1px 1px 7px;
+  border-radius: 1000px;
+  border: 10px solid rgb(38, 41, 82);
+  box-shadow: 0 0 30px 25px;
+}
+
+.clock section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.clock section p {
+  font-size: 4.5rem;
+}
+
+.clock section small {
+  color: #000000;
+  text-shadow: none;
+}
+
+
+
+
