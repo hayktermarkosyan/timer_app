@@ -10,8 +10,10 @@ const Clock = () => {
   const [timerSeconds, setTimerSeconds] = useState();
 
   const eventHandler = (eventDate) => {
-    const countDownDate = new Date(eventDate).getTime();   
-          
+    const countDownDate = new Date(eventDate).getTime();  
+    
+    localStorage.setItem('eventDate', eventDate);
+
     if(interval){
       clearInterval(interval);
     }
@@ -47,12 +49,17 @@ const Clock = () => {
       if (distance < 0) {
         // Stop Timer
         clearInterval(interval.current);
-      } else {
+      } else if(isNaN(countDownDate) === false) {
         // Update Timer
         setTimerDays(days);
         setTimerHours(hours);
         setTimerMinutes(minutes);
         setTimerSeconds(seconds);
+      } else if(isNaN(countDownDate)) {
+        setTimerDays(0);
+        setTimerHours(0);
+        setTimerMinutes(0);
+        setTimerSeconds(0);
       }
     }, 10);
   }
@@ -68,13 +75,11 @@ const Clock = () => {
           <input 
             name="eventDate" 
             id="eventDate" 
-            type="date"
-            autoComplete="off"
+            type="datetime-local"
             value={localStorage.getItem('eventDate')}
-            onChange={(e) => {
-              e.preventDefault();
-              localStorage.setItem('eventDate', e.target.value)
+            onInput={(e) => {
               eventHandler(e.target.value);
+              e.preventDefault();
             }}
           />
         </form>
