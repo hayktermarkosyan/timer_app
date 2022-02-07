@@ -76,6 +76,33 @@
   text-shadow: none;
 }
 
+@media screen and (max-width: 720px) {
+  .setEventDate {
+    height: 80px;
+    width: 350px;
+    margin-bottom: 50px;
+  }
+  
+  .setEventDate label {
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  
+  .setEventDate input {
+   font-size: small;
+   height: 30px;
+  }
 
-
-
+  .clock {
+    height: 150px;
+    width: 350px;
+  }
+  
+  .clock section {
+    padding: 1rem;
+  }
+  
+  .clock section p {
+    font-size: 2.5rem;
+  }
+}
